@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="The ultimate guide to coffee: history, types, brewing tips, and fun facts. Brew your best cup yet!">
+<title>Coffee Universe</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap" rel="stylesheet">
+<style>
+    /* ===== Global Styles ===== */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Roboto', sans-serif; background: #fdf6f0; color: #333; line-height: 1.6; }
+    a { text-decoration: none; transition: 0.3s; }
+    a:hover { opacity: 0.8; }
+
+    /* ===== Header ===== */
+    header {
+        background: linear-gradient(135deg, #8B4513, #D2691E);
+        color: white;
+        text-align: center;
+        padding: 50px 20px;
+        position: relative;
+        overflow: hidden;
+    }
+    header h1 { font-family: 'Playfair Display', serif; font-size: 48px; letter-spacing: 3px; margin-bottom: 10px; }
+    header p { font-size: 20px; }
+
+    /* ===== SVG Wave ===== */
+    .wave {
+        position: relative;
+        top: -5px;
+    }
+
+    /* ===== Navigation ===== */
+    nav {
+        display: flex;
+        justify-content: center;
+        background: #D2691E;
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 12px 0;
+    }
+    nav a {
+        color: white;
+        font-weight: bold;
+        font-size: 16px;
+        padding: 8px 15px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        background: rgba(255,255,255,0.05);
+    }
+    nav a:hover { background: rgba(255,255,255,0.2); }
+
+    /* ===== Sections ===== */
+    section { max-width: 1000px; margin: 50px auto; padding: 20px; border-radius: 12px; }
+    h2 { color: #8B4513; font-family: 'Playfair Display', serif; font-size: 32px; margin-bottom: 20px; text-align: center; }
+
+    /* ===== Gallery ===== */
+    #gallery {
+        background: linear-gradient(120deg, #f4e2d8, #f0c27b);
+        padding: 40px;
+    }
+    .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 25px;
+    }
+    .gallery-grid div {
+        overflow: hidden;
+        border-radius: 12px;
+        transition: transform 0.5s, box-shadow 0.5s;
+        cursor: pointer;
+    }
+    .gallery-grid div img {
+        width: 100%;
+        height: auto;
+        display: block;
+        transition: transform 0.5s;
+    }
+    .gallery-grid div:hover img {
+        transform: scale(1.1) rotate(3deg);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
+
+    /* ===== Sections Styling ===== */
+    section p, section li { font-size: 18px; margin-bottom: 12px; }
+    ul li { margin-left: 20px; list-style: disc inside; }
+    ol li { margin-left: 20px; }
+
+    /* ===== Quiz ===== */
+    .quiz { background: #fff8f0; padding: 25px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+    .quiz h2 { text-align: left; }
+    .quiz p { font-weight: 500; }
+
+    /* ===== Contact Form ===== */
+    form { background: #fff; padding: 25px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+    input, textarea, button { width: 100%; padding: 12px; margin-bottom: 15px; border-radius: 8px; border: 1px solid #ccc; font-size: 16px; }
+    button { background: #D2691E; color: white; border: none; font-weight: bold; cursor: pointer; transition: 0.3s; }
+    button:hover { background: #8B4513; }
+
+    /* ===== Footer ===== */
+    footer {
+        background: #8B4513;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        font-size: 16px;
+    }
+
+    /* ===== Animations ===== */
+    .fade-in { opacity: 0; transform: translateY(20px); animation: fadeInUp 1s forwards; }
+    @keyframes fadeInUp {
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 768px) {
+        header h1 { font-size: 36px; }
+        header p { font-size: 16px; }
+        nav { flex-direction: column; }
+    }
+</style>
+</head>
+<body>
+
+<header class="fade-in">
+    <h1>☕ Coffee Universe</h1>
+    <p>Explore the art, science and magic behind every cup.</p>
+</header>
+
+<div class="wave">
+    <svg viewBox="0 0 1440 100" style="display:block;">
+        <path fill="#D2691E" fill-opacity="1" d="M0,40 C480,120 960,-40 1440,40 L1440,00 L0,0 Z"></path>
+    </svg>
+</div>
+
+<nav class="fade-in">
+    <a href="#history">📜 Story</a>
+    <a href="#types">🌱 Beans</a>
+    <a href="#brewing">🔥 Brew</a>
+    <a href="#facts">💡 Facts</a>
+    <a href="#quiz">❓ Quiz</a>
+    <a href="#contact">✉️ Contact</a>
+</nav>
+
+<section id="gallery" class="fade-in">
+    <h2>Coffee Shop Gallery</h2>
+    <div class="gallery-grid">
+        <div><img src="./logo1.png" alt="Image 1"></div>
+        <div><img src="./logo2.png" alt="Image 2"></div>
+        <div><img src="./logo3.png" alt="Image 3"></div>
+        <div><img src="./logo4.png" alt="Image 4"></div>
+    </div>
+</section>
+
+<section id="history" class="fade-in">
+    <h2>History of Coffee</h2>
+    <p>Coffee originated in Ethiopia around the 9th century, discovered by a goat herder named Kaldi. It spread globally and became a staple by the 17th century. Today, coffee is loved worldwide!</p>
+    <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=800" alt="Coffee beans" style="margin-top:20px; border-radius:12px;">
+</section>
+
+<section id="types" class="fade-in">
+    <h2>Types of Coffee</h2>
+    <ul>
+        <li><strong>Arabica:</strong> Smooth, complex flavor, high-altitude grown.</li>
+        <li><strong>Robusta:</strong> Stronger, bitter, ideal for espresso crema.</li>
+        <li><strong>Single-Origin:</strong> Unique flavors from one region.</li>
+        <li><strong>Blends:</strong> Balanced mixtures, e.g., breakfast blend.</li>
+    </ul>
+    <p>Pro tip: Roast from light (bright acidity) to dark (bold, smoky).</p>
+</section>
+
+<section id="brewing" class="fade-in">
+    <h2>How to Brew the Perfect Cup</h2>
+    <ol>
+        <li>Fresh beans, ground just before brewing.</li>
+        <li>Filtered water at 195-205°F (90-96°C).</li>
+        <li>Methods: Drip, French press, espresso, pour-over.</li>
+        <li>Ratio: 1-2 tbsp per 6 oz water.</li>
+        <li>Add milk, sugar, or spices as desired.</li>
+    </ol>
+    <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800" alt="Pour-over coffee" style="margin-top:20px; border-radius:12px;">
+</section>
+
+<section id="facts" class="fade-in">
+    <h2>Fun Facts About Coffee</h2>
+    <ul>
+        <li>Over 1,000 chemical compounds.</li>
+        <li>Average American drinks 3 cups/day.</li>
+        <li>Caffeine acts as a natural pesticide.</li>
+        <li>Finland consumes the most coffee per capita.</li>
+        <li>Espresso: "pressed out" in Italian.</li>
+    </ul>
+    <p>Moderate consumption boosts alertness. Max 400mg caffeine/day.</p>
+</section>
+
+<section id="quiz" class="quiz fade-in">
+    <h2>Coffee Quiz: How Much Do You Know?</h2>
+    <p>1. Origin of coffee? <strong>Ethiopia</strong></p>
+    <p>2. Coffee with crema? <strong>Espresso</strong></p>
+    <p>Share your score in the contact form below!</p>
+</section>
+
+<section id="contact" class="fade-in">
+    <h2>Contact Us</h2>
+    <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Message or Quiz Score" rows="5" required></textarea>
+        <button type="submit">Send</button>
+    </form>
+</section>
+
+<footer class="fade-in">
+    <p>&copy; 2023 Coffee Universe. Brew responsibly! ☕</p>
+</footer>
+
+</body>
+</html>
